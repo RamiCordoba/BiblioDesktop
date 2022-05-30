@@ -1,0 +1,105 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastWebcam-OpenCVSharp3" Version="1.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>Paquetes\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>Paquetes\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DSLibros.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DSLibros.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="DSSocios.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DSSocios.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Presentation\Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmAgregarEditarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmAgregarEditarTematica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmAgregarEditarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmAgregarEditarSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmTematicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Presentation\FrmSocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DSLibros.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSLibros.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DSSocios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSocios.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
